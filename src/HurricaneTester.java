@@ -98,18 +98,21 @@ public class HurricaneTester
         int min = Integer.MAX_VALUE;
 
         //divisor for average and sum
-        int numInRange = 0;
-        double sum = 0;
+        ArrayList<Hurricane> chosenHurricanes = new ArrayList<Hurricane>(index);
 
         for (Hurricane a : hurricaneArrayList){
             if ( a.getYear() >= start && a.getYear() <= end){
-                numInRange++;
-
+                chosenHurricanes.add(a);
             }
         }
+        
 
         //print the data
-        System.out.printf("%14s %4d - %4d", "Hurricanes", start, end);
-        System.out.printf("Year Category");
+        System.out.printf("%14s %4d - %4d \n", "Hurricanes ", start, end);
+        System.out.printf("Year \t Hurricane \t Category \t Pressure (mb) \t Windspeed (mph) \n\n");
+        for (Hurricane c : chosenHurricanes){
+            System.out.println(c.toString());
+        }
+
      }
 }
