@@ -109,5 +109,6 @@ public class HurricaneTester
         }
 
         //print the data
+        System.out.printf("%14s %4d - %4d", "Hurricanes", start, end);
      }
 }
