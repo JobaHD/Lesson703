@@ -93,10 +93,6 @@ public class HurricaneTester
             }
         }
 
-        //calculate max, min, and average
-        int max = Integer.MIN_VALUE;
-        int min = Integer.MAX_VALUE;
-
         //divisor for average and sum
         ArrayList<Hurricane> chosenHurricanes = new ArrayList<Hurricane>(index);
 
@@ -105,7 +101,47 @@ public class HurricaneTester
                 chosenHurricanes.add(a);
             }
         }
-        
+
+        //calculate max, mins and averages
+        int categoryMax = Integer.MIN_VALUE;
+        int pressureMax = Integer.MIN_VALUE;
+        double windspeedMax = Integer.MIN_VALUE;
+
+        int categoryMin = Integer.MAX_VALUE;
+        int pressureMin = Integer.MAX_VALUE;
+        double windspeedMin = Integer.MAX_VALUE;
+
+        double categoryAvg = 0;
+        double pressureAvg = 0;
+        double windspeedAvg = 0;
+
+        for (Hurricane i : chosenHurricanes){
+            if (i.getCat() >= categoryMax){
+                categoryMax = i.getCat();
+            }
+            if (i.getCat() <= categoryMin){
+                categoryMin = i.getCat();
+            }
+            if (i.getPressure() >= pressureMax){
+                pressureMax = i.getPressure();
+            }
+            if (i.getPressure() <= pressureMin) {
+                pressureMin = i.getPressure();
+            }
+            if (i.getWindspeed() >= windspeedMax) {
+                windspeedMax = i.getWindspeed();
+            }
+            if (i.getWindspeed() <= windspeedMin) {
+                windspeedMin = i.getWindspeed();
+            }
+            categoryAvg += i.getCat();
+            pressureAvg += i.getPressure();
+            windspeedAvg += i.getWindspeed();
+        }
+        categoryAvg /= chosenHurricanes.size()-1;
+        pressureAvg /= chosenHurricanes.size()-1;
+        windspeedAvg /= chosenHurricanes.size()-1;
+
 
         //print the data
         System.out.printf("%14s %4d - %4d \n", "Hurricanes ", start, end);
@@ -113,6 +149,10 @@ public class HurricaneTester
         for (Hurricane c : chosenHurricanes){
             System.out.println(c.toString());
         }
+        System.out.println("=============================================================================");
+        System.out.printf("\t Average: \t %11.2f \t %16.2f \t %7.2f \n", categoryAvg, pressureAvg, windspeedAvg);
+        System.out.printf("\t Minimum: \t %8d \t %14d \t %7.2f \n", categoryMin, pressureMin, windspeedMin);
+        System.out.printf("\t Maximum: \t %8d \t %14d \t %7.2f \n", categoryMax, pressureMax, windspeedMax);
 
      }
 }
