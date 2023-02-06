@@ -53,7 +53,7 @@ public class HurricaneTester
         
         //convert the windspeed, determine categories, calculate sums
         for (int i = 0; i < index; i++){
-            windSpeeds[i] += 1.151;
+            windSpeeds[i] *= 1.15078;
             if (windSpeeds[i] <= 95 ){
                 categories[i] = 1;
             } else if (windSpeeds[i] <= 110 ) {
@@ -73,6 +73,7 @@ public class HurricaneTester
         for (int i = 0; i < index; i++){
             hurricaneArrayList.add(new Hurricane(years[i], names[i], months[i], categories[i],pressures[i], windSpeeds[i]));
         }
+        
 
         //user prompted for range of years
         Scanner input = new Scanner(System.in);
