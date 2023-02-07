@@ -3,6 +3,7 @@
  *
  * @author Jonathan Rodriguez Gomez
  * @version 2/5/2023
+ * @purpose OOP program to calculate the average category, pressure, and wind speed of Atlantic hurricanes that have occurred between a given year range. Also, tally the number of storms in each category according to the Saffir-Simpson scale.
  *
  */
  
