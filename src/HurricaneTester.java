@@ -16,7 +16,7 @@ public class HurricaneTester
     public static void main(String[] args) throws IOException
     {
         //read data from text file & put in an array
-        File fileName = new File("src/HurricaneData.txt");
+        File fileName = new File("HurricaneClass/src/HurricaneData.txt");
         Scanner inFile = new Scanner(fileName);
         int numValues = 0;
         
@@ -116,6 +116,12 @@ public class HurricaneTester
         double pressureAvg = 0;
         double windspeedAvg = 0;
 
+        int cat1Counter = 0;
+        int cat2Counter = 0;
+        int cat3Counter = 0;
+        int cat4Counter = 0;
+        int cat5Counter = 0;
+
         for (Hurricane i : chosenHurricanes){
             if (i.getCat() >= categoryMax){
                 categoryMax = i.getCat();
@@ -138,6 +144,18 @@ public class HurricaneTester
             categoryAvg += i.getCat();
             pressureAvg += i.getPressure();
             windspeedAvg += i.getWindspeed();
+
+            if (i.getCat() == 1){
+                cat1Counter++;
+            } else if (i.getCat() == 2) {
+                cat2Counter++;
+            } else if (i.getCat() == 3) {
+                cat3Counter++;
+            } else if (i.getCat() == 4) {
+                cat4Counter++;
+            } else {
+                cat5Counter++;
+            }
         }
         categoryAvg /= chosenHurricanes.size()-1;
         pressureAvg /= chosenHurricanes.size()-1;
@@ -153,7 +171,8 @@ public class HurricaneTester
         System.out.println("=============================================================================");
         System.out.printf("\t Average: \t %11.2f \t %16.2f \t %7.2f \n", categoryAvg, pressureAvg, windspeedAvg);
         System.out.printf("\t Minimum: \t %8d \t %14d \t %7.2f \n", categoryMin, pressureMin, windspeedMin);
-        System.out.printf("\t Maximum: \t %8d \t %14d \t %7.2f \n", categoryMax, pressureMax, windspeedMax);
-
+        System.out.printf("\t Maximum: \t %8d \t %14d \t %7.2f \n\n", categoryMax, pressureMax, windspeedMax);
+        System.out.print("Summary of Categories: ");
+        System.out.printf("\n Cat 1: %2d \n Cat 2: %2d \n Cat 3: %2d \n Cat 4: %2d \n Cat 5: %2d",cat1Counter ,cat2Counter ,cat3Counter ,cat4Counter ,cat5Counter);
      }
 }

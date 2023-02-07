@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fbeb96c-4cb8-4577-b62d-8c0984e40a66" name="Changes" comment="First save on 2/5/2023 8:57PM">
-      <change beforePath="$PROJECT_DIR$/src/HurricaneTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HurricaneTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +32,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "W:/APCS/Mod7/Lesson702"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -91,7 +92,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675649747590</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="First save on 2/5/2023 8:57PM">
+      <created>1675650219259</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675650219259</updated>
+    </task>
+    <task id="LOCAL-00006" summary="First save on 2/5/2023 8:57PM">
+      <created>1675650258808</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675650258808</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
